@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <style>
+            #Wrapper {
+                border:1px solid #ccc;
+                padding: 10px;
+            }
+            .item {
+                margin: 5px;
+                padding: 5px;
+                background-color: #f0f0f0;
+            }
+        </style>
+    </head>
+<body>
+
+    <div id="Wrapper">
+        <h2> Item List</h2> 
+        <ul id = "itemList">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            
+        </ul>
+
+        <button onclick="traverseDOM()">Traverse DOM</button>
+        <script>
+            function traverseDOM(){
+                const second = document.querySelectorAll(',items')[1];
+                console.log("second",second);
+
+                const parent = second.ParentNode
+                console.log("parent",parent);
+
+
+                const firstChild = parent.firstElementChild
+                console.log("firstChild",firstChild);
+
+                const lastChild = parent.lastElementChild
+                console.log("lastChild",lastChild);
+
+                const firstSibling = second.previousElementSibling
+                console.log("firstSibling",firstSibling);
+
+                const nextSibling = second.nextElementSibling
+                console.log("nextSibling",nextSibling);
+                second.style.backgroundcolor = 'red';
+                if(firstChild) firstChild.style.backgroundcolor = 'green';
+                if(lastChild) lastChild.style.backgroundcolor = 'blue';
+                if(firstSibling) firstSibling.style.backgroundcolor = 'yellow';
+                if(nextSibling) nextSibling.style.backgroundcolor = 'pink';
+                
+                
+            }
+        </script>
+    </div>
+</body>
+</html>

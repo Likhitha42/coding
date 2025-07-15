@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Create & Append Elements</title>
+        <style>
+            #output {
+                margin-top:15px;
+                padding: 10px;
+                border:1px solid #aaa;
+                background:#f9f9f9;
+            }
+            .message {
+                padding: 5px;
+                margin: 4px 0;
+                background-color: yellowgreen;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2> Create & Append Elements</h2>
+
+        <input type = "text" id="userInput" placeholder = "Enter a message">
+        <button onclick="addMessage()">Add Message</button>
+        <button onclick="PrependMessage()">Prepend Message</button>
+
+
+        <div id = "output">
+            <p>Meassages Will appear here: </p>
+        </div>
+        <script>
+            function addMessage(){
+                const userInput = document.getElementById('userInput').value;
+                 if(userInput,trim()=='') return;
+
+                 const newDiv = document.createElement('div')
+                 newDiv.className = "message";
+                 newDiv.innerText = userInput;
+
+                 document.getElementById('output').appendChild(newDiv);
+                 document.getElementById('userInput').value = '';
+
+
+            }
+            function PrendMessage(){
+                 const userInput = document.getElementById('userInput').value;
+                 if(userInput,trim()=='') return;
+
+                 const newDiv = document.createElement('div')
+                 newDiv.className = "message";
+                 newDiv.innerText = userInput;
+
+                 const container = document.grtElementById('output');
+                 container.insertBefore(newDiv,container,children[1]);
+                 document.getElementById('userInput').value = '';
+
+
+            }
+        </script>
+
+    </body>
+</html>
