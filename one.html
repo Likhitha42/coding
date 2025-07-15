@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+    <head>
+        <body>
+            <h1 id="mainTitle">Original Title</h1>
+            <p id = "text">This is some original text</p>
+
+            <img id = "myImage" src="https://via.placeholder.com/150" alt="Original Image">
+
+            <a id = "myLink" href="https://example.com" target="_blank">Go to Example</a>
+
+            <button onclick="changeContent()">Change Content</button>
+            <script>
+                function changeContent(){
+                    document.getElementById('text').innerText = "This is some Changed text. "
+                    //change the inner HTML
+                    document.getElementById('mainTitle').innerHTML = '<div> Updated Title </div>'
+
+                    //change the image source and alt
+                   const s = document.getElementById('myImage')
+                    s.src = '/img jpg'
+                    s.alt = "no image"
+
+                    //change the link ref and text
+                    const l = document.getElementById('myImage')
+                    l.href = "WWW.codenish.com"
+                    l.innerText = "ABC"
+
+
+
+                }
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,101 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juicy Grill - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
+<html>
+
+    <head>
+        <style>
+            .myclass{
+                colour: green;
+            }
+            .highlight{
+                background-colour: greenyellow
+            }
+
+        </style>
+    </head>
 <body>
-  <!-- Landing Section -->
-  <section class="landing">
-    <div class="text-content">
-      <h1>Wake up your taste buds with this <span class="highlight">juicy bite</span></h1>
-      <div class="small-images">
-        <img src="food1.jpg" alt="Pizza" />
-        <img src="food2.jpg" alt="Kebab Platter" />
-        <img src="food3.jpg" alt="Dishes" />
-      </div>
-      <button class="cta">Explore the menu</button>
-      <div class="tags">
-        <button>Taste the Fire-Grilled Flavor</button>
-        <button>Grab Your Grill Platter Today</button>
-        <button>Order Now & Satisfy Your Cravings</button>
-      </div>
-    </div>
-    <div class="image-content">
-      <img src="victoria-shes-UC0HZdUitWY-unsplash.jpg" alt="Grill Platter" />
-    </div>
-  </section>
+    <h2 id = "myId">This is an element with ID</h2>
 
-  <!-- Dashboard Section -->
-  <section class="dashboard">
-    <div class="left-panel">
-      <h2>Hello, Sarfaraz</h2>
-      <div class="voucher">
-        <h3>Get Discount Voucher <span>Up To 20%</span></h3>
-        <p>Use this code for limited-time orders only</p>
-      </div>
+<p class="myClass">paragraph 1 with class 'myClass'</p>
+<p Class="myClass">paragraph 2 with class 'myClass'</p>
 
-      <div class="category">
-        <h4>Category</h4>
-        <div class="categories">
-          <span>Bakery</span>
-          <span>Burger</span>
-          <span>Beverage</span>
-          <span>Chicken</span>
-          <span>Pizza</span>
-          <span>Seafood</span>
-        </div>
-      </div>
+<div class="myClass">Div with class 'myClass'</div>
+<div>Just a div</div>
+<script>
+    //1.Get Element by Id
+    const s=document.getElementById('myId');
+    s.style.colur = 'red';
+    console.log(s);
 
-      <div class="popular">
-        <h4>Popular Dishes</h4>
-        <div class="cards">
-          <div class="card">
-            <h5>Fish Burger</h5>
-            <p>$5.59</p>
-          </div>
-          <div class="card">
-            <h5>Beef Burger</h5>
-            <p>$5.59</p>
-          </div>
-          <div class="card">
-            <h5>Cheese Burger</h5>
-            <p>$5.59</p>
-          </div>
-        </div>
-      </div>
+    //2.Get Element By classname
+    const c=document.getElementsByClassName('myClass');
+    for(let i;i<c,length;i++){
+        c[i].style.fontWeight = 'bold'
+    }
+    console.log(c);
 
-      <div class="recent">
-        <h4>Recent Orders</h4>
-        <ul>
-          <li>Fish Burger - $5.59</li>
-          <li>Japan Ramen - $5.59</li>
-          <li>Fried Rice - $5.59</li>
-        </ul>
-      </div>
-    </div>
+    //3.Get Element By tag name div
+    const d = document.getElementByTagName('div');
+    for(let i = 0;i<d.length;i++){
+    d[i].style.border = '2px solid red';
+    }
+    console.log(d);
 
-    <div class="right-panel">
-      <div class="balance">
-        <h4>Your Balance</h4>
-        <p>$12,000</p>
-      </div>
+    //4.query selector 
 
-      <div class="order">
-        <h4>Order Menu</h4>
-        <ul>
-          <li>Pepperoni Pizza - $5.59</li>
-          <li>Cheese Burger - $5.59</li>
-          <li>Vegan Pizza - $5.59</li>
-        </ul>
-        <p>Service: $1.00</p>
-        <p>Total: $202.00</p>
-        <button class="checkout">Checkout</button>
-      </div>
-    </div>
-  </section>
+    const queryS = document.querySelector('.myClass');
+    queryS.ClassList.add('highlight');
+    console.log(queryS);
+
+    // query Selector ALL
+    const querySelectAll = document.querySelectAll('div.myClass')
+    querySelectAll.forEach(el=>{
+        el.style.padding = '10px'
+    });
+    console.log(querySelectAll);
+</script>
 </body>
 </html>
