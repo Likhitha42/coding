@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single ELemet Form</title>
+</head>
+<body>
+    <div id="mainid">
+    </div>
+    <script>
+        const c = document.getElementById('mainid');
+        const label1 = document.createElement('label');
+        label1.textContent = 'User Name: ';
+        c.appendChild(label1);
+        const input1 = document.createElement('input');
+        input1.type = 'text';
+        input1.id = 'username';
+        c.appendChild(input1);
+        c.appendChild(document.createElement('br'));
+        const label2 = document.createElement('label');
+        label2.textContent = 'Email: ';
+        c.appendChild(label2);
+        const input2 = document.createElement('input');
+        input2.type = 'email';
+        input2.id = 'email';
+        c.appendChild(input2);
+        c.appendChild(document.createElement('br'));
+        const label3=document.createElement('label');
+        label3.textContent="Password";
+        c.appendChild(label3);
+        const input3=document.createElement('input');
+        input3.type="text";
+        input3.id="Password"
+        c.appendChild(input3)
+        c.appendChild(document.createElement('br'));
+        const button=document.createElement('button');
+        button.textContent="Submit"
+        c.appendChild(button)
+    </script>
+</body>
+</html>

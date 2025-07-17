@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Event Delegation Demo</title>
+ <style>
+   ul {
+     padding: 0;
+   }
+   li {
+     list-style: none;
+     padding: 8px;
+     background: #eee;
+     margin: 4px 0;
+     cursor: pointer;
+   }
+   li:hover {
+     background: #d0ebff;
+   }
+ </style>
+</head>
+<body>
+
+
+ <h2>Click Any Item</h2>
+ <ul id="itemList">
+   <li>Item 1</li>
+   <li>Item 2</li>
+   <li>Item 3</li>
+ </ul>
+
+
+ <button onclick="addItem()">Add Item</button>
+
+
+ <script>
+    const parent = document.getElementById('itemList');
+
+    prent.addEventListener('click',function(e){
+        if(e.target && e.target.tagName == "LI"){
+            alert("you clicked"+e.target.innerText)
+        }
+
+    })
+    let item = 4;
+    function addItem(){
+        const li = document.getElement.createElement('li');
+        li.innerText = "item" + item++;
+        parent.appendChild(li);
+    }
+</script>
+</body>
+</html>
+
